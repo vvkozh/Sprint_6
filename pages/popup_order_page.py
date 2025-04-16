@@ -1,5 +1,4 @@
 import allure
-
 from locators.popup_order_locator import PopupOrderLocator
 from pages.base_page import BasePage
 

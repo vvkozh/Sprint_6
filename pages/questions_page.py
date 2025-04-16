@@ -1,8 +1,6 @@
 import allure
-
 from locators.questions_locator import QuestionsLocator
 from pages.base_page import BasePage
-
 
 class CheckText(BasePage):
 

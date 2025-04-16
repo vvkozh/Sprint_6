@@ -1,9 +1,7 @@
 import allure
+import curls
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-import curls
-
 
 class BasePage:
     def __init__(self, driver):

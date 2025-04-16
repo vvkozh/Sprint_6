@@ -12,7 +12,6 @@ class TestScooterOrder:
     @pytest.mark.parametrize('click_button_method', ["click_button_order_header", "click_button_order_big"])
     def test_different_order_button(self, driver, click_button_method):
         # arrange
-        driver = driver
         main_page = MainPage(driver)
         # act
         page_order = getattr(main_page, click_button_method)
@@ -24,7 +23,6 @@ class TestScooterOrder:
     @pytest.mark.parametrize('order_data', data.DataForTest.DataForOrder)
     def test_scooter_order(self, driver, order_data):
         # arrange
-        driver = driver
         main_page = MainPage(driver)
         main_page.click_button_order_header()
         order_scooter = FillPersonalData(driver)

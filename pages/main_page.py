@@ -24,3 +24,6 @@ class MainPage(BasePage):
     def click_scooter_logo(self):
         self.click_on_element(MainPageLocator.BUTTON_SCOOTER)
 
+    @allure.step('Ожидание переключения на вторую вкладку')
+    def switch_new_window(self):
+        self.switch_to_new_tab_and_wait()

@@ -1,5 +1,4 @@
 import allure
-from locators.main_locator import MainPageLocator
 from locators.order_personal_data_locator import PersonalDataLocator
 from pages.base_page import BasePage
 

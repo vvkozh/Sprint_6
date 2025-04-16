@@ -8,7 +8,6 @@ class TestClickLogo:
     @allure.title('Тест клика на лого Яндекса и редиректа на Дзен')
     def test_click_yandex_logo(self, driver):
         # arrange
-        driver = driver
         main_page = MainPage(driver)
         # act
         main_page.click_yandex_logo()

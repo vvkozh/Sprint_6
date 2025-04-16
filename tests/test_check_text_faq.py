@@ -9,7 +9,6 @@ class TestCheckTextAnswer:
     @pytest.mark.parametrize('question_number, answer_text', data.Questions.questions_list)
     def test_check_text_question(self, driver, question_number, answer_text):
         # arrange
-        driver = driver
         main_page = CheckText(driver)
         # act
         main_page.scroll_to_question(question_number)
