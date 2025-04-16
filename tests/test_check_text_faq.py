@@ -3,7 +3,6 @@ import pytest
 import data
 from pages.questions_page import CheckText
 
-
 class TestCheckTextAnswer:
     @allure.title('Тест текста ответа на вопрос')
     @pytest.mark.parametrize('question_number, answer_text', data.Questions.questions_list)

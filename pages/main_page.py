@@ -1,8 +1,4 @@
-import time
-
 import allure
-
-import curls
 from locators.main_locator import MainPageLocator
 from pages.base_page import BasePage
 

@@ -3,8 +3,6 @@ from locators.order_personal_data_locator import PersonalDataLocator
 from pages.base_page import BasePage
 
 class FillPersonalData(BasePage):
-
-
     @allure.step('Заполнение полей на странице "Для кого самокат"')
     def filling_field_who_scooter(self, order_data):
         self.send_keys_to_input(PersonalDataLocator.INPUT_NAME, order_data['name'])

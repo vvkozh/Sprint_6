@@ -1,5 +1,3 @@
-import time
-
 import allure
 import curls
 from pages.main_page import MainPage
@@ -18,7 +16,6 @@ class TestClickLogo:
     @allure.title('Тест клика на лого Самоката')
     def test_click_scooter_logo(self, driver):
         # arrange
-        driver = driver
         main_page = MainPage(driver)
         # act
         main_page.click_scooter_logo()
