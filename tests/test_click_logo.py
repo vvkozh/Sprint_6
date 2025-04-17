@@ -11,7 +11,8 @@ class TestClickLogo:
         main_page.click_yandex_logo()
         main_page.switch_to_new_tab_and_wait()
         # assert
-        assert driver.current_url == curls.url_dzen
+        url_window = main_page.get_url_window()
+        assert url_window == curls.url_dzen
 
     @allure.title('Тест клика на лого Самоката')
     def test_click_scooter_logo(self, driver):
@@ -20,4 +21,5 @@ class TestClickLogo:
         # act
         main_page.click_scooter_logo()
         # assert
-        assert driver.current_url == curls.url_main_pages
+        url_window = main_page.get_url_window()
+        assert url_window == curls.url_main_pages

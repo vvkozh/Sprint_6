@@ -3,6 +3,9 @@ import curls
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from conftest import driver
+
+
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
@@ -42,3 +45,7 @@ class BasePage:
         new_window = self.driver.window_handles[1]
         self.driver.switch_to.window(new_window)
         WebDriverWait(self.driver, 10).until(EC.url_contains(curls.url_dzen))  # Ждём загрузки нужного URL
+
+    @allure.step('Получение URL страницы')
+    def get_url(self):
+        return self.driver.current_url

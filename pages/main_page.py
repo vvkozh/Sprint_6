@@ -23,3 +23,7 @@ class MainPage(BasePage):
     @allure.step('Ожидание переключения на вторую вкладку')
     def switch_new_window(self):
         self.switch_to_new_tab_and_wait()
+
+    @allure.step('Получение текущего URL страницы')
+    def get_url_window(self):
+        return self.get_url()
