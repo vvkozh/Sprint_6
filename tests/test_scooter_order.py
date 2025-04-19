@@ -16,8 +16,9 @@ class TestScooterOrder:
         # act
         page_order = getattr(main_page, click_button_method)
         page_order()
+        url_window = main_page.get_url_window()
         # assert
-        assert driver.current_url == curls.url_order
+        assert url_window == curls.url_order
 
     @allure.title('Тест заказа самоката')
     @pytest.mark.parametrize('order_data', data.DataForTest.DataForOrder)
